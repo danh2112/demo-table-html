@@ -1,0 +1,32 @@
+table {
+    width: 500px;
+    height: 200px;
+}
+
+h2 {
+    text-align: center;
+    color: royalblue;
+}
+
+.day-table1 {
+    background-color: orange;
+}
+
+
+.day-table1, .day-son, .day-sun {
+    color: white;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.day-detail, .day-detail > td {
+    border: 1px solid black;
+}
+
+.table-day-2 {
+    width: 500px;
+    border-collapse: collapse;
+}
