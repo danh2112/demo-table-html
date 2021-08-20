@@ -47,3 +47,39 @@
         }
     }
  }
+
+ function chuyen_c_thanh_f(){
+     let c;
+     c= +document.getElementById('do_C').value;
+     if (isNaN(c)){
+        document.getElementById('result3').innerHTML = 'Can nhap lai mot so';
+     }
+     else {
+        document.getElementById('result3').innerHTML = "Do F = " +((c*1.8)+32);
+     }
+ }
+
+function tinh_tuoi(){
+    let dob;
+    dob= document.getElementById("DOB").value;
+    let today = new Date();
+    if (dob!==""){
+        dob = new Date(dob);
+        let nam_sinh, nam_hien_tai, thang_sinh, thang_hien_tai, ngay_sinh, ngay_hien_tai;
+        nam_sinh = dob.getFullYear();
+        nam_hien_tai = today.getFullYear();
+        thang_sinh = dob.getMonth();
+        thang_hien_tai = today.getMonth();
+        ngay_sinh = dob.getDate();
+        ngay_hien_tai = today.getDate();
+        let tuoi = nam_hien_tai - nam_sinh;
+        if((thang_hien_tai < thang_sinh)||(thang_hien_tai === thang_sinh && ngay_hien_tai < ngay_sinh)){
+            tuoi--;
+        }
+        document.getElementById('result_tinh_tuoi').innerHTML = tuoi;
+
+    }
+    else{
+        document.getElementById('error_tinh_tuoi').innerHTML = 'Can nhap ngay thang nam sinh';
+    }
+}
